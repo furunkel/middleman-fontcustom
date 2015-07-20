@@ -9,6 +9,7 @@ module Middleman
     option :templates, 'scss', 'Output templates'
     option :no_hash, true, 'Create hash for no cache policy'
     option :preprocessor_path, nil, 'Relative path from your compiled CSS to your output directory'
+    option :autohint, false, 'Automatically hints font.'
     option :autowidth, false, 'Trims horizontal white space from each glyph.'
 
     def initialize(app, options_hash={}, &block)
@@ -30,6 +31,7 @@ module Middleman
           :no_hash => config[:no_hash],
           :preprocessor_path => config[:preprocessor_path],
           :autowidth => config[:autowidth]
+          :autohint => config[:autohint]
         }).compile
       }
 
