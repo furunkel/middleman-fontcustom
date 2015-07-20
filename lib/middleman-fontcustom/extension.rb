@@ -30,7 +30,7 @@ module Middleman
           :templates => config[:templates].split(/\s/),
           :no_hash => config[:no_hash],
           :preprocessor_path => config[:preprocessor_path],
-          :autowidth => config[:autowidth]
+          :autowidth => config[:autowidth],
           :autohint => config[:autohint]
         }).compile
       }
